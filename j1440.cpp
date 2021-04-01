@@ -28,26 +28,19 @@ int main() {
  
     cin >> v1 >> v2;
  
-    int v1Parents[TREE_SIZE] = { 0, };
-    int v2Parents[TREE_SIZE] = { 0, };
- 
-    v1Parents[0] = v1;
-    v2Parents[0] = v2;
-    for (int i = 1; i < TREE_SIZE; i++) {
-        if (!v1Parents[i - 1] && !v2Parents[i - 1]) break;
-        v1Parents[i] = tree[v1Parents[i - 1]];
-        v2Parents[i] = tree[v2Parents[i - 1]];
-    }
- 
+    int orV2 = v2;
     int commonP = 0;
-    for (int i = 0; i < TREE_SIZE; i++) {
-        for (int j = 0; j < TREE_SIZE; j++) {
-            if (v1Parents[i] == v2Parents[j]) {
-                commonP = v1Parents[i];
+    while (v1) {
+        while (v2) {
+            if (v1 == v2) {
+                commonP = v1;
                 break;
             }
+            v2 = tree[v2];
         }
         if (commonP) break;
+        v2 = orV2;
+        v1 = tree[v1];
     }
  
     cout << commonP << endl;
