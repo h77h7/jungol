@@ -61,7 +61,7 @@ bool backTrack(int k, int n) {
 			sdoku[ey[k]][ex[k]] = c[i];
 			if (backTrack(k, n)) return true;
 		}
-		sdoku[ey[k]][ex[k]] = 0;
+		sdoku[ey[k]][ex[k]] = 0;	//í›„ì²˜ë¦¬ ê¹Œë¨¹ì§€ ë§ê¸°!
 		return false;
 	}
 }
@@ -76,8 +76,8 @@ int main() {
 		for (int j = 0; j < 9; j++) {
 			cin >> sdoku[i][j];
 			if (sdoku[i][j] == 0) {
-				empty_num++;	//ºóÄ­ °³¼ö ¼¼±â
-				ex[empty_num] = j;	//ºóÄ­ ÀÎµ¦½º ÀúÀå
+				empty_num++;	//ë¹ˆì¹¸ ê°œìˆ˜ ì„¸ê¸°
+				ex[empty_num] = j;	//ë¹ˆì¹¸ ì¸ë±ìŠ¤ ì €ì¥
 				ey[empty_num] = i;
 			}
 		}
