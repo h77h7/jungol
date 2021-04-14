@@ -1,5 +1,6 @@
 //LIS(최장증가부분수열)
 //이진탐색 사용( O(nlogn) )
+//문제와 LIS사이 관계를 파악하는게 중요
 #include <iostream>
 
 using namespace std;
