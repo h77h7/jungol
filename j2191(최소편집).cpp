@@ -12,14 +12,8 @@ int main() {
 	char a[MAX_N];
 	char b[MAX_N];
 	
-	scanf("%d", &N);
-	for (int i = 1; i <= N; i++) {
-		scanf(" %c", &a[i]);
-	}
-	scanf(" %d", &M);
-	for (int i = 1; i <= M; i++) {
-		scanf(" %c", &b[i]);
-	}
+	scanf("%d %s", &N, a+1);
+	scanf(" %d %s", &M, b+1);
 
 	int editDistance[MAX_N][MAX_N] = { 0 };
 
