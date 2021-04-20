@@ -1,4 +1,4 @@
-//prim말고 dijkstra를 N번 반복하는 방법 사용
+//플로이드말고 dijkstra를 N번 반복하는 방법 사용
 #include <iostream>
 
 using namespace std;
